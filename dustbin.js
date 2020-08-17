@@ -6,9 +6,9 @@ class Dustbin {
           'density':1.0,
           isStatic:true
       }
-      this.left = Bodies.rectangle(600,600,10,100);
-      this.center = Bodies.rectangle(630,600,50,10);
-      this.right = Bodies.rectangle(600,650,10,100);
+      this.left = Bodies.rectangle(600,600,10,100,options);
+      this.center = Bodies.rectangle(650,650,50,10,options);
+      this.right = Bodies.rectangle(700,600,10,100,options);
       this.image = loadImage("dustbingreen.png");
       World.add(world, this.left);
       World.add(world,this.right);
@@ -17,7 +17,7 @@ class Dustbin {
     display(){
       push();
       imageMode(CENTER);
-      image(this.image,630,600,50,100);
+      image(this.image,650,600,100,100);
       pop();
     }
   }
